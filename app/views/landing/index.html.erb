@@ -1,0 +1,39 @@
+<h1> Mario's Food Source </h1>
+
+<p>Welcome to Mario's Food Source! We like all the foods, but we especially like the Italian foods!  My dad started this store in 1943 when he moved here from Italy, and I have taken over the shop to let him get some much needed rest!</p>
+
+<% if Product.most_reviews.any? %>
+  <h4>Most Reviewed Product:</h4>
+  <ul>
+    <% Product.most_reviews.each do |product| %>
+      <li><%= link_to product.name, product_path(product)%></li>
+    <% end %>
+  </ul>
+<% else %>
+<p>Write some reviews so we can display our most reviewed product here!</p>
+<% end %>
+
+<% if Product.most_recent.any? %>
+  <h4>Most Recently Added:</h4>
+  <ul>
+    <% Product.most_recent.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+<% else %>
+<p>When we add new products, you'll see the most recently added right here!</p>
+<% end %>
+
+<% if @products.any? %>
+  <h4>All Items in Stock:</h4> 
+  <ul>
+    <% @products.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no product yet!</p>
+<% end %>
+
+<p><%= link_to "Create new product!", new_product_path %></p>
+
