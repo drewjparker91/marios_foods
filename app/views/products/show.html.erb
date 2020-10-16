@@ -6,12 +6,14 @@
   <h4>Here are this product's reviews:</h4>
   <% @product.reviews.each do |review| %>
     <ul>
-      <li><%= link_to review.author, prodcut_review_path(@prodcut, review) %></li>
+      <li><%= link_to review.author, product_review_path(@product, review) %></li>
     </ul>
   <% end %>
 <% else %>
   <p>No reviews for this product... Be the first to leave a review!</p>
 <% end %>
+
+<p><%= link_to "Add a Review!", new_product_review_path(@product) %></p>
 
 
 <p><%= link_to "Edit Product", edit_product_path(@product) %></p>

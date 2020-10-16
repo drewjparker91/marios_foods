@@ -1,11 +1,11 @@
 <h1>Author: <%= @review.author %></h1>
 <h2>Review For: <%= @product.name %></h2>
-<h2>Product Rating: <%= @review.rating %></h2>
+<h2>Product Rating: <%= @review.rating %>/5</h2>
 <h4><%= @review.content %></h4>
 
 <p><%= link_to "Edit Review", edit_product_review_path(@product, @review) %></p>
 <p><%= link_to "Delete Review", product_review_path(@product, @review),
                         :data => {:confirm => "Are you sure?",
-                                       :method => "Delete"} %></p>
+                                       :method => "delete"} %></p>
 
 <p><%= link_to "Return to Product", product_path(@product) %></p>                                   
