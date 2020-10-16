@@ -27,4 +27,9 @@ describe "views all pages" do
     click_on "Edit Product"
     expect(page).to have_content "Edit Product"
   end
+
+  it "views the review page of a product" do
+    visit product_review_path(@product, @review)
+    expect(page).to have_content "Billy Bob"
+  end
 end
