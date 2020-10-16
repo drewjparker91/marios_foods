@@ -1,0 +1,13 @@
+<h1> Mario's Food Source </h1>
+
+<% if @products.any? %>
+  <ul>
+    <% @products.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no product yet!</p>
+<% end %>
+
+<p><%= link_to "Create new product!", new_product_path %></p>

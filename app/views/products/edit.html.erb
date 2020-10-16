@@ -1,0 +1,11 @@
+<h1>Edit Product<h1>
+<%= form_for @product do |f| %>
+  <%= f.label :Name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :Price %>
+  <%= f.text_field :price %>
+  <br>
+  <%= f.label :Country_of_Origin %>
+  <%= f.text_field :origin%>
+<% end %>

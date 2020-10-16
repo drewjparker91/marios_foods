@@ -46,6 +46,6 @@ class ReviewsController < ApplicationController
 
   private
     def review_params
-      params.require(:song).permit(:author, :content, :rating)
+      params.require(:review).permit(:author, :content, :rating)
     end
 end
