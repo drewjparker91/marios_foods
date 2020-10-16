@@ -1,9 +1,9 @@
 <h1>Product: <%= @product.name %></h1>
-<h3>Cost: <%= @product.cost %></h3>
+<h3>Cost: $<%= @product.cost %></h3>
 <h3>Country of Origin: <%= @product.origin%></h3>
 
 <% if @product.reviews.any? %>
-  <h4>Click on a buyer's name to read their review!:</h4>
+  <h4>Click on a buyer's name to read their review:</h4>
   <% @product.reviews.each do |review| %>
     <ul>
       <li><%= link_to review.author, product_review_path(@product, review) %></li>
