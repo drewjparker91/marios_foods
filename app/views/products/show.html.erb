@@ -3,7 +3,7 @@
 <h3>Country of Origin: <%= @product.origin%></h3>
 
 <% if @product.reviews.any? %>
-  <h4>Here are this product's reviews:</h4>
+  <h4>Click on a buyer's name to read their review!:</h4>
   <% @product.reviews.each do |review| %>
     <ul>
       <li><%= link_to review.author, product_review_path(@product, review) %></li>
@@ -14,8 +14,6 @@
 <% end %>
 
 <p><%= link_to "Add a Review!", new_product_review_path(@product) %></p>
-
-
 <p><%= link_to "Edit Product", edit_product_path(@product) %></p>
 <p><%= link_to "Delete Product", product_path(@product),
                           :data => {:confirm => "Are you sure?",
