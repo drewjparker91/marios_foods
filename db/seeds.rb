@@ -10,7 +10,7 @@ Product.destroy_all
 Review.destroy_all
 
 50.times do |index|
-  product = Product.create!(name: Faker::Food.unique.ingredient, cost: Faker::Number.decimal(r_digits:1), origin: Faker::Address.country)  
+  product = Product.create!(name: Faker::Food.unique.ingredient, cost: Faker::Number.decimal(r_digits:2), origin: Faker::Address.country)  
   5.times do
     product.reviews.new(author: Faker::Name.unique.name, rating: Faker::Number.between(from: 1, to: 5).to_i, content: Faker::Lorem.paragraph_by_chars(number: 50), product_id: Faker::Number.between(from: 1, to: 50))
     product.save

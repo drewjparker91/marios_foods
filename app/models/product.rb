@@ -4,6 +4,7 @@ class Product < ApplicationRecord
   validates :cost, presence: true
   validates :origin, presence: true
   before_save(:titleize_product)
+  before_save(:round_decimal)
 
   scope :most_recent, -> { order(created_at: :desc).limit(3)}
 
@@ -21,5 +22,9 @@ class Product < ApplicationRecord
     def titleize_product
       self.name = self.name.titleize
       self.origin = self.origin.titleize
+    end
+
+    def round_decimal
+      self.cost = self.cost.round(2)
     end
 end
