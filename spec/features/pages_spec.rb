@@ -21,4 +21,10 @@ describe "views all pages" do
     visit new_product_path
     expect(page).to have_content "New Product"
   end
+
+  it "views page to edit a product" do
+    visit product_path(@product)
+    click_on "Edit Product"
+    expect(page).to have_content "Edit Product"
+  end
 end
