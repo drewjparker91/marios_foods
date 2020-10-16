@@ -16,4 +16,9 @@ describe "views all pages" do
     visit product_path(@product)
     expect(page).to have_content "Cost: $"
   end
+
+  it "views page to make a new product" do
+    visit new_product_path
+    expect(page).to have_content "New Product"
+  end
 end
