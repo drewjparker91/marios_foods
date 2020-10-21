@@ -1,7 +1,11 @@
+<div class="top">
 <h1> Mario's Food Source </h1>
-
+</div>
+<hr>
 
 <p>Welcome to Mario's Food Source! We like all the foods, but we especially like the Italian foods!  My dad started this store in 1943 when he moved here from Italy, and I have taken over the shop to let him get some much needed rest!</p>
+
+<hr>
 
 <% if Product.most_reviews.any? %>
   <h4>Most Reviewed Product:</h4>
@@ -25,16 +29,8 @@
 <p>When we add new products, you'll see the most recently added right here!</p>
 <% end %>
 
-<% if @products.any? %>
-  <h4>All Items in Stock:</h4> 
-  <ul>
-    <% @products.each do |product| %>
-      <li><%= link_to product.name, product_path(product) %></li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>There are no product yet!</p>
-<% end %>
+
+<p><%= link_to "View all produdcts", products_path %></p>
 
 <p><%= link_to "Create new product!", new_product_path %></p>
 

@@ -19,9 +19,33 @@
 
 body {
   font-family: "Crete Round", serif;
-  background-color: teal;
-  color: rgb(250, 43, 140);
+  background-color: #16697a;
+  color: #db6400;
+  font-size: large;
+  margin-top: 25px;
 }
 a {
-  color: orange;
+  color: #ffa62b;
 }
+
+.top {
+  font-family: fantasy;
+}
+
+h1 {
+  font-size: 44px;
+}
+
+.container {
+  background-color: #f8f1f1;
+  opacity: 80%;
+  padding-bottom: 3%;
+  padding-top: 3%;
+}
+
+hr {
+  border-color: #16697a;
+  border-width: 2px;
+}
+
+

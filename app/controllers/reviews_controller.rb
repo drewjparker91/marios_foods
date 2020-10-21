@@ -30,6 +30,7 @@ class ReviewsController < ApplicationController
   end
 
   def update
+    @product = Product.find(params[:product_id])
     @review = Review.find(params[:id])
     if @review.update(review_params)
       flash[:notice] = "Review successfully updated!"

@@ -1,4 +1,6 @@
+<div class="top">
 <h1> Mario's Food Source </h1>
+</div>
 
 <% if @products.any? %>
   <ul>
@@ -10,7 +12,9 @@
   <p>There are no product yet!</p>
 <% end %>
 
-<p><%= link_to "Create new product!", new_product_path %></p>
+
+
+<p><%= link_to "Create a new product!", new_product_path %></p>
 
 <% if Product.most_reviews.any? %>
   <h4>Check out our most reviewed product!</h4>
@@ -32,5 +36,5 @@
   </ul>
 <% else %>
 <p>When we add new products, you'll see the most recently added right here!</p>
-<% end %> %>
+<% end %>
 

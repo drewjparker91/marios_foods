@@ -1,6 +1,8 @@
+<div class="top">
 <h1>Product: <%= @product.name %></h1>
 <h3>Cost: $<%= @product.cost %></h3>
 <h3>Country of Origin: <%= @product.origin%></h3>
+</div>
 
 <% if @product.reviews.any? %>
   <h4>Click on a buyer's name to read their review:</h4>
