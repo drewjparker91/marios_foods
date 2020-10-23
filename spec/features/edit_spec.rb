@@ -17,7 +17,7 @@ describe "editing reviews and products" do
     check 'user[admin]'
     click_on 'Sign up'
     visit edit_product_path(@product)
-    fill_in "product[name]", :with => "Dingus"
+    fill_in "product[name]", :with => "Dingus" 
     fill_in "product[cost]", :with => 6.99
     fill_in "product[origin]", :with => "Mexico"
     click_on "Update Product"
