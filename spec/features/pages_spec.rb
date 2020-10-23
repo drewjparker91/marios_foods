@@ -13,10 +13,10 @@ describe "views all pages" do
     expect(page).to have_content "Dilly Bar"
   end
 
-  # it "views a product page" do
-  #   visit product_path(@product)
-  #   expect(page).to have_content "Cost: $"
-  # end
+  it "views a product page" do
+    visit product_path(@product)
+    expect(page).to have_content "Cost: $"
+  end
 
   # it "views page to make a new product" do
   #   visit new_product_path
