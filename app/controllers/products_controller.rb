@@ -1,7 +1,8 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.all 
+    @products = Product.all
+    @user = current_user
   end
 
   def new
@@ -26,6 +27,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @user = current_user
     render :show
   end
 

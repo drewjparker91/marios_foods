@@ -20,6 +20,7 @@ class ReviewsController < ApplicationController
   def show
     @product = Product.find(params[:product_id])
     @review = Review.find(params[:id])
+    @user = current_user
     render :show
   end
 
