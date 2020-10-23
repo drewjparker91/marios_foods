@@ -41,6 +41,4 @@ describe "editing reviews and products" do
     click_on 'Update Review'
     expect(page).to have_content 'Big Daddy'
   end
-
-
 end
