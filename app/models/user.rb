@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  before_action :configure_permitted_parameters, if: :devise_controller?
-  helper_method :authenticate_admin
+  # before_action :configure_permitted_parameters, if: :devise_controller?
+  # helper_method :authenticate_admin
 
   protected
 
