@@ -6,7 +6,7 @@
 <p>Welcome to Mario's Food Source! We like all the foods, but we especially like the Italian foods!  My dad started this store in 1943 when he moved here from Italy, and I have taken over the shop to let him get some much needed rest!</p>
 
 <hr>
-<% if current_user || current_user && current_user.admin %>
+
   <% if Product.most_reviews.any? %>
     <h4>Most Reviewed Product:</h4>
     <ul>
@@ -28,11 +28,14 @@
   <% else %>
   <p>When we add new products, you'll see the most recently added right here!</p>
   <% end %>
-  <p><%= link_to "View all produdcts", products_path %></p>
-<% else %>
-  <h4>Please Create an account to view this site!</h4>
 
-<% end %>
+  <% if current_user || current_user && current_user.admin %>
+    <p><%= link_to "View all produdcts", products_path %></p>
+  <% end %>
+<%# <% else %>
+  <%# <h4>Please Create an account to view this site!</h4> %>
+
+
 
 <% if current_user && current_user.admin %>
   <p><%= link_to "Create new product!", new_product_path %></p>
