@@ -45,6 +45,15 @@ Your project should include seed data for 50 products and 250 reviews. Use Faker
 
 ## Setup/Installation Requirements
 
+# NOTE TO TRAVIS
+* there is an admin checkbox I made in order to pass tests
+* ADMIN LOGIN INFO:
+* Email: abc123@gmail.com
+* Password: abc123
+* USER LOGIN INFO:
+* Email: def456@gmail.com
+* Password: def456
+
 To View This Project:
 * Clone this repository: https://github.com/drewjparker91/marios_foods.git.
 * Run "bundle" in the terminal to bundle the ruby gems
