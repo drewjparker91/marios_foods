@@ -3,14 +3,14 @@
 <h2>Product Rating: <%= @review.rating %>/5</h2>
 <h4><%= @review.content %></h4>
 
-<% if current_user.admin %>
+<%# <% if current_user.admin %>
   <p><%= link_to "Edit Review", edit_product_review_path(@product, @review) %></p>
   <p><%= link_to "Delete Review", product_review_path(@product, @review),
                         :data => {:confirm => "Are you sure?",
                                        :method => "delete"} %></p>
-<% end %>
+<%# <% end %>
 
-<% if current_user || current_user.admin %>
+<%# <% if current_user || current_user.admin %>
   <p><%= link_to "Return to Product", product_path(@product) %></p>
   <p><%= link_to "Return to Home Page", root_path %></p>                                   
-<% end %>
+<%# <% end %>
