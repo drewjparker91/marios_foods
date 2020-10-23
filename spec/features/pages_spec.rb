@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "views all pages" do
   
   before :each do
-    user = User.create(email: "abc123@gmail.com", password: "abc123", admin: true)
+    user = User.create(email: "abc123@gmail.com", password: "abc123", admin: false)
     @product = Product.create({:name => "Dilly Bar", :origin => "Mexico", :cost => 1.99})
     @review = Review.create(author: "Billy Bob", rating: 5, content: "asdf;lkjasfdl;kjasdflkjasdf;lkjasdfl;kjasdf;lkjasdf", product_id: @product.id)
   end

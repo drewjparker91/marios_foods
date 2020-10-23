@@ -29,15 +29,15 @@
   <p>When we add new products, you'll see the most recently added right here!</p>
   <% end %>
 
-  <% if current_user || current_user && current_user.admin %>
+  <%# <% if current_user || current_user && current_user.admin %>
     <p><%= link_to "View all produdcts", products_path %></p>
-  <% end %>
+  <%# <% end %>
 <%# <% else %>
   <%# <h4>Please Create an account to view this site!</h4> %>
 
 
 
-<% if current_user && current_user.admin %>
+<%# <% if current_user && current_user.admin %>
   <p><%= link_to "Create new product!", new_product_path %></p>
-<% end %>
+<%# <% end %>
 

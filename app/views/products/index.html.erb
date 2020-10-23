@@ -13,9 +13,9 @@
 <% end %>
 
 
-<% if current_user && current_user.admin %>
+<%# <% if current_user && current_user.admin %>
 <p><%= link_to "Create a new product!", new_product_path %></p>
-<% end %>
+<%# <% end %>
 
 <% if Product.most_reviews.any? %>
   <h4>Check out our most reviewed product!</h4>
@@ -39,7 +39,7 @@
 <p>When we add new products, you'll see the most recently added right here!</p>
 <% end %>
 
-<% if current_user || current_user.admin %>
+<%# <% if current_user || current_user.admin %>
   <p><%= link_to "Return to Home Page", root_path %></p>
-<% end %>
+<%# <% end %>
 
