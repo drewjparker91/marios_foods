@@ -18,17 +18,6 @@ describe "views all pages" do
     expect(page).to have_content "Cost: $"
   end
 
-  # it "views page to make a new product" do
-  #   visit new_product_path
-  #   expect(page).to have_content "New Product"
-  # end
-
-  # it "views page to edit a product" do
-  #   visit product_path(@product)
-  #   click_on "Edit Product"
-  #   expect(page).to have_content "Edit Product"
-  # end
-
   it "views the review page of a product" do
     visit product_review_path(@product, @review)
     expect(page).to have_content "Billy Bob"
